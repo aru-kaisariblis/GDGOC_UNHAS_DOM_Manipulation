@@ -4,6 +4,7 @@ let counter = 0;
 // 2. Ambil elemen HTML yang akan menampilkan nilai dan tombol
 const counterDisplay = document.getElementById('counter-value');
 const buttonTambah = document.getElementById('btn-tambah');
+const buttonTambahbanyak = document.getElementById('btn-tambahbnyk');
 const buttonKurang = document.getElementById('btn-kurang');
 const buttonReset = document.getElementById('btn-reset');
 
@@ -29,6 +30,12 @@ buttonKurang.addEventListener('click', function() {
 // --- Logika Tombol Reset ---
 buttonReset.addEventListener('click', function() {
     counter = 0;
+    updateDisplay();
+});
+
+// --- Logika Tombol Tambah Banyak ---
+buttonTambahbanyak.addEventListener('click', function() {
+    counter += 5;
     updateDisplay();
 });
 
